@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+//import { persistor, store } from 'redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+//import { Provider } from 'react-redux';
+import { App } from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import './assets/fonts/Montserrat-Thin.ttf';
+import './assets/fonts/Montserrat-Bold.ttf';
+import './assets/fonts/Montserrat-Light.ttf';
+import './assets/fonts/Montserrat-Medium.ttf';
+import './assets/fonts/Montserrat-Regular.ttf';
+import './assets/fonts/Montserrat-SemiBold.ttf';
+
+import './index.scss';
+import './assets/styles/_reset-style.scss'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    //<Provider store={store}>
+      //<PersistGate>
+        //<BrowserRouter basename='/Finance'>
+          <App />
+        //</BrowserRouter>
+      //</PersistGate>
+    //</Provider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
