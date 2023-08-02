@@ -73,7 +73,7 @@ export const UserCard = ({ selectedUser, closeModal, onUpdate, following }) => {
             </div>
           </div>
           <p className={s.twitts}>{tweets.length} tweets</p>
-          <p className={s.followers}>{followingCount} followers</p>
+          <p className={s.followers}>{followingCount.toLocaleString()} followers</p>
           <button
             className={localIsFollowing ? s.buttonFollowing : s.button}
             onClick={updateFollowing}

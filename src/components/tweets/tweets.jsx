@@ -39,7 +39,9 @@ export const Tweets = () => {
 
     const handleGoBack = () => {
         dispatch({ type: 'users/reset' });
-    }
+    };
+
+
 
     return (
         <div className={s.container}>

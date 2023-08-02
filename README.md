@@ -1,18 +1,16 @@
-# Getting Started with Create React App
+# Mini Twitter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Mini Twitter is a mini social media service that allows users to read people's thoughts and follow interesting pages. The application has two main routes, the homepage, and the tweets page. If a user tries to access a route that doesn't exist, they will be redirected to the homepage.
 
-## Available Scripts
+## Getting Started
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
@@ -29,42 +27,29 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## About Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Homepage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The homepage of Mini Twitter welcomes users and provides them with information about the service. Users can find a brief description of the application and how it works. Additionally, the homepage contains a button that allows users to navigate to the tweets page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Tweets Page
 
-## Learn More
+The tweets page displays a list of tweets from different users. As users scroll down, more tweets are loaded dynamically, allowing them to explore a wide variety of thoughts from various individuals. At the top of the page, there is a "Load More" button, which, when clicked, fetches and displays additional tweets from the server.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Users can also find a "Back" button at the top of the tweets page. Clicking on this button redirects the user back to the homepage.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### UserCard Modal
 
-### Code Splitting
+When a user clicks on a user's photo within a tweet, a UserCard modal window appears. The UserCard provides additional information about the selected user, such as the total number of tweets and followers. Users can also follow or unfollow the selected user by clicking on the "Follow" button in the UserCard modal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies Used
 
-### Analyzing the Bundle Size
+Mini Twitter is built using the following technologies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React - A popular JavaScript library for building user interfaces.
+- Redux - A state management library for managing application state.
+- React Router - A declarative routing library for handling navigation within the application.
+- Axios - A promise-based HTTP client used for making API requests.
+- SCSS - A CSS preprocessor used for styling the components.
