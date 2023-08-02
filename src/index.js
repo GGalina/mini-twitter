@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
-//import { persistor, store } from 'redux/store';
+import store, { persistor } from './redux/store'; 
 import { PersistGate } from 'redux-persist/integration/react';
-//import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import { App } from './App';
 
 import './assets/fonts/Montserrat-Thin.ttf';
@@ -14,14 +14,15 @@ import './assets/fonts/Montserrat-Regular.ttf';
 import './assets/fonts/Montserrat-SemiBold.ttf';
 
 import './index.scss';
-import './assets/styles/_reset-style.scss'
+import './assets/styles/_reset-style.scss';
+import './assets/styles/_mixins.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    //<Provider store={store}>
-      //<PersistGate>
-        //<BrowserRouter basename='/Finance'>
-          <App />
-        //</BrowserRouter>
-      //</PersistGate>
-    //</Provider>
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </PersistGate>
+  </Provider>
 );

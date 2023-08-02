@@ -1,13 +1,16 @@
 import React from 'react';
-import { UserCard } from './components/userCard/userCard'; // Import the UserCard component
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { HomePage } from '../src/pages/home';
+import { TweetsPage } from '../src/pages/tweets';
 
 export const App = () => {
   return (
     <div>
-      {/* Your other content goes here */}
-      <UserCard /> {/* Render the UserCard component */}
-          {/* Your other content goes here */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/tweets" element={<TweetsPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
     </div>
   );
 };
-
