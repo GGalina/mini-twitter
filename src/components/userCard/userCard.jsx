@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import s from './userCard.module.scss';
 import logo from '../../assets/img/logo.png';
 import { updateUserData } from '../../redux/operations';
+import PropTypes from 'prop-types';
+
 
 export const UserCard = ({ selectedUser, closeModal, onUpdate, following }) => {
   const dispatch = useDispatch();
@@ -84,4 +86,16 @@ export const UserCard = ({ selectedUser, closeModal, onUpdate, following }) => {
       </div>
     </div>
   );
+};
+
+UserCard.propTypes = {
+  selectedUser: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    tweets: PropTypes.arrayOf(PropTypes.object),
+    followers: PropTypes.number.isRequired,
+  }).isRequired,
+  closeModal: PropTypes.func.isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  following: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
